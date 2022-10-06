@@ -1,0 +1,387 @@
+@import url('https://fonts.googleapis.com/css2?family=Noto+Sans+JP:wght@100;300;400;500;700;900&display=swap');
+@import url('https://fonts.googleapis.com/css2?family=Noto+Serif+JP:wght@200;300;400;500;600;700;900&display=swap');
+@import url('https://fonts.googleapis.com/css2?family=Thasadith:ital@0;1&display=swap');
+@import url('https://fonts.googleapis.com/css2?family=Outfit:wght@100;200;300;400;500;600;700;800;900&display=swap');
+
+:root{
+  --main-bg-color: linear-gradient( to bottom, var(--navbar), aliceblue);
+  --reverse-bg-color: linear-gradient( to top, var(--navbar), aliceblue);
+  --alternate-bg-color: linear-gradient( to bottom, var(--green), aliceblue);
+  --navbar: hsl(208, 28%, 48%);
+  --skyblue:hsl(197, 76%, 74%);
+  --silverblue:rgb(91, 128, 160);
+  --purple: rgb(17, 3, 37);
+  --orange:rgb(179, 72, 0);
+  --white:hsla(192, 10%, 90%, 0.979);
+  --lightgradient: linear-gradient(
+    to bottom,
+    rgba(255, 255, 255, 0.2),
+    rgba(255, 255, 255, 0.4)
+  );
+  --headerfont: 2.5vw;
+  --largefont: 2vw;
+  --mediumfont:1.5vw;
+  --smallfont: 1.25vw;
+  --textfont: 1.1vw;
+}
+
+* {
+  box-sizing: border-box; /*accounts for margin and padding in sizing, easier to size */
+  margin: 0;
+  padding: 0;
+}
+
+body {
+  font-family: 'EB Garamond', serif; 
+  font-weight: 100;
+  line-height: 1.5;
+  overflow-x: hidden;
+}
+
+ul {
+  list-style-type: none; /* takes bullet points out */
+}
+
+h2, h3{
+  line-height: 1.6;
+  text-align: center;
+  font-family: 'Outfit', sans-serif;
+  font-weight: 200;
+}
+
+h4{
+  font-family: 'EB Garamond', serif;
+  font-size: var(--textfont);
+  text-align: center;
+  font-weight: 200;
+}
+
+h5{
+  padding: 2rem;
+  text-align: center;
+}
+
+img {
+  width: 100%; /*keep images inside box container*/
+}
+
+a {
+  text-decoration: none; /* takes underline out*/
+  font-weight: 100;
+}
+
+a:visited{
+  color: aliceblue;
+}
+
+a:active{   /* emulates pressing of button in 3d space */
+  top: 1px;
+}
+
+/* navigation */
+
+.navbar {
+  display: flex;
+  position: sticky;
+  justify-content: space-between;
+  align-items: center;
+  background-color: var(--navbar);
+  color:hsla(192, 10%, 90%, 0.979);
+  height: 8vh;
+  margin-right: auto;
+  top: 0;
+  z-index: 99999;
+}
+
+.logo {
+  font-family: 'Outfit', sans-serif;
+  position: relative;
+  margin-left: 2rem;
+  color: var(--white);
+  font-size: var(--smallfont);
+  padding: 1.5rem;
+  font-weight: 100;
+  transition: color 500ms ease-out;
+}
+
+.logo:hover{
+  color: var(--wine);
+}
+
+.navlinks{
+  font-family: 'Outfit', sans-serif;
+  display: flex;
+  position: relative;
+  width: 50%;
+  right: 0;
+  margin-left: auto;
+}
+
+.navlinks ul {
+  display: flex; /*align navbar items in horizontal row */
+  width: 100%;
+  flex: 1;
+}
+
+.navlinks ul li{
+  flex: 1;
+}
+
+.navlinks li a {
+  display: flex;
+  color: var(--white);
+  padding: 1rem;
+  /* margin-right: 2rem; */
+  font-weight: 200;
+  position: relative;
+  justify-content: center;
+  font-size: var(--textfont);
+  border-left: var(--silverblue) solid 1px;
+}
+
+.navlinks li a:hover {
+  color:aliceblue;
+}
+
+.navlinks li a:after {
+  position: absolute;
+  bottom: 0;
+  left: 0;
+  right: 0;
+  margin: auto;
+  width: 0%;
+  content: '.';
+  color: transparent;
+  background: var(--skyblue);
+  height: 2px;
+}
+
+.navlinks ul li>a:hover:after {
+  width: 50%;
+}
+
+nav a,
+nav a:after,
+nav a:before {
+  transition: all .4s;
+}
+
+.book-button{
+  background-color: var(--silverblue);
+  color:aliceblue;
+  padding: 1rem 2rem;
+  height: 3rem;
+  width: fit-content;
+  font-size: 1rem;
+  font-weight: 300;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  position: relative;
+  text-overflow: none;
+  border-radius: 1rem;
+  border: var(--skyblue) .5px solid;
+  transition: border-radius 500ms ease-out, background-color 420ms ease-out;
+}
+
+.book-button:hover{
+  background-color: rgb(214, 75, 0);
+  border-radius: 2rem;
+  cursor: pointer;
+}
+
+nav .book-button{
+  margin: auto 5rem auto 4rem;
+  padding: 0 3rem;
+}
+
+#contact-nav{
+  border-right: var(--silverblue) solid 1px;
+}
+
+/* home page */
+
+/* main-content */
+
+#main-header-wrapper{
+    height: 100vh;
+    width: auto;
+    background: var(--main-bg-color);
+}
+
+#video {
+    height: 70vh;
+    display: flex;
+    position: relative;
+    z-index: -1;
+}
+
+#main-header{
+    height: 100vh;
+    font-size: var(--smallfont);
+    transition: opacity 1s;
+}
+
+#main-header h2{
+    font-family: 'Outfit', sans-serif;
+    font-size: var(--headerfont);
+    font-weight: 100;
+    margin: auto;
+    padding: 8vh 0 5vh;
+    width: fit-content;
+    position: relative;
+}
+  
+#main-header h3{
+    position: relative;
+    text-align: center;
+    font-size: var(--smallfont);
+    font-weight: 400;
+    text-shadow: .2rem .4rem 22px rgb(124, 124, 124);
+}
+
+#main-content-wrapper{
+  height: fit-content;
+}
+
+.main-content{
+  display: flex;
+  height: 75vh;
+  border: red solid 2px;
+}
+
+.main-content h2{
+  text-align: start;
+  margin-bottom: 2rem;
+}
+
+.main-content section{
+  width: 33%;
+  padding: 2rem;
+  height: 100%;
+  border: black solid 2px;
+}
+
+#main-content-one{
+  background: aliceblue;
+}
+
+#main-content-one section{
+  background: var(--silverblue)
+}
+#main-content-two{
+  background: rgba(201, 225, 255, 0.574);
+}
+#main-content-three{
+  background: var(--purple);
+}
+
+
+/* services */
+
+#services{
+  background: var(--navbar);
+  height: 74vh;
+}
+
+/* contact page */
+
+.contact-main{
+  height: 100vh;
+  /* padding-bottom: 20vh; */
+  position: relative;
+  margin: auto;
+  background: var(--main-bg-color);
+  scroll-snap-type: y proximity;
+  overflow-y: scroll;
+}
+
+.contact-main header{
+  height: fit-content;
+  max-width: 30%;
+  margin: auto;
+  position: relative;
+}
+
+.contact-main h3{
+  text-align: start;
+  margin: 0;
+  padding-top: 11%;
+  color: aliceblue;
+  font-family: 'Outfit', sans-serif;
+  font-weight: 100;
+  font-size: var(--mediumfont);
+  transition: opacity 1s;
+}
+
+.contact-main h4{
+  margin: 0 auto 10vh;
+  padding-top: 10%;
+  color: rgba(130, 54, 0, 0.75);
+  width: 70%;
+  font-size: 16px;
+  text-align: center;
+}
+
+#contact-wrapper{
+  height: 100vh;
+}
+
+form{
+  display: grid;
+  grid-template-columns: repeat(auto-fill, minmax(100%, 1fr));
+  grid-auto-rows: fit-content;
+  gap: 2rem;
+  width: 90%;
+  max-width: 35rem;
+  height: 44rem;
+  padding: 4rem;
+  margin: 3vh auto;
+  backdrop-filter: blur(2rem);
+  box-shadow: 0 .7rem 2rem rgba(0, 0, 0, 0.199);
+  border: 4px rgba(255, 255, 255, 0.155) solid;
+  border-radius: 1rem;
+}
+
+label{
+  font-size: var(--smallfont);
+  font-weight: 300;
+} 
+
+input, textarea {
+  width: 100%;
+  max-width: 25rem;
+  margin-top: 1rem;
+  padding: .3rem .7rem;
+  outline: 0;
+  border: 3px rgba(255, 255, 255, 0.462) solid;
+  border-radius: .4rem .2rem;
+  background: transparent;
+  font-size: 1rem;
+}
+
+.contact-date{
+  margin: .5rem 0;
+  width: min-content;
+}
+
+form p{
+  width: 100%;
+  position: relative;
+  margin: auto;
+  color: aliceblue;
+}
+
+button{
+  background: none;
+  border: 1px rgba(255, 255, 255, 0.462) solid;
+  border-radius: 1rem;
+}
+
+#contact-book-button{
+  width: 100%;
+  margin: auto;
+  display: flex;
+  justify-content: center;
+  border-radius: 2rem;
+}

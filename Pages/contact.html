@@ -1,0 +1,63 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Moving Eye Media</title>
+    <link rel = stylesheet href = "Styles/styles.css"></style>
+    <script src = "Scripts/main.js" defer></script>
+</head>
+<body>
+    <nav class="navbar">
+        <div class = "logo-wrapper">
+            <a href="index.html" class = "logo">Moving Eye Media</a>
+        </div>
+        <div class = "burger">
+            <span class = "bar"></span>
+            <span class = "bar" id = "bar2"></span>
+            <span class = "bar"></span>
+        </div>
+        <section class = "navlinks"> 
+            <ul class = "navlinks-menu">
+                <li><a href="about.html">About</a></li>
+                <li><a href="contact.html" id = "contact-nav">Contact</a></li>
+                <li><a href="portfolio.html">Portfolio</a></li>
+                <a href = "services.html" class = "book-button">Let's Fly</a> <!-- add drone icon with propellors spinning up on hover -->
+            </ul>
+        </section>
+    </nav>
+        <section class = "contact-main">
+            <header>
+                <h3>Let's get in touch.</h3>
+                <h4>Please fill out the form below and I will respond to your inquiry within 24 hours. Thank you!</h4>
+            </header>
+            <div id="contact-wrapper">
+            <form action = "contactform.php" method= "POST" id = "contact-form">
+                <p>
+                    <label for = "name">Name*</label>
+                    <input type = "text" class = "contact-name" name = "name">
+                </p>
+                <p>
+                    <label for = "email">Email*</label>
+                    <input type = "email" class = "contact-input" name = "email">
+                </p>
+                <p>
+                    <label for = "service">How many nights are you looking to book?</label>
+                    <input type = "text" name = "service">
+                </p>
+                <p>
+                    <label for = "message">Anything in particular that you would like to know about the place?</label>
+                    <textarea name = "message" rows = "4" type = "textarea"></textarea>
+                    <div id="contact-book-button">
+                        <!-- clean up submit button -->
+                        <button>
+                            <a class = "book-button" name = "submit">Submit</a>
+                        </button>
+                    </div>
+                </p>
+            </form>
+            </div>
+        </section>
+    </body>
+</html> 
