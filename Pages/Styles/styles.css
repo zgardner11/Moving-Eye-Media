@@ -9,7 +9,7 @@
   --alternate-bg-color: linear-gradient( to bottom, var(--green), aliceblue);
   --navbar: hsl(208, 28%, 48%);
   --skyblue:hsl(197, 76%, 74%);
-  --silverblue:rgb(91, 128, 160);
+  --silverblue:rgba(68, 110, 147, 0.637);
   --purple: rgb(17, 3, 37);
   --orange:rgb(179, 72, 0);
   --white:hsla(192, 10%, 90%, 0.979);
@@ -78,6 +78,9 @@ a:active{   /* emulates pressing of button in 3d space */
   top: 1px;
 }
 
+p{
+  line-height: 1.6;
+}
 /* navigation */
 
 .navbar {
@@ -247,7 +250,7 @@ nav .book-button{
 .main-content{
   display: flex;
   height: 75vh;
-  border: red solid 2px;
+  border: rgb(184, 177, 177) solid 1px;
 }
 
 .main-content h2{
@@ -257,9 +260,11 @@ nav .book-button{
 
 .main-content section{
   width: 33%;
+  height: 90%;
+  margin: auto 0 auto 4rem;
   padding: 2rem;
-  height: 100%;
-  border: black solid 2px;
+  border: var(--orange) solid 1px;
+  border-radius: .2rem 1rem;
 }
 
 #main-content-one{
@@ -269,13 +274,25 @@ nav .book-button{
 #main-content-one section{
   background: var(--silverblue)
 }
+
 #main-content-two{
   background: rgba(201, 225, 255, 0.574);
 }
-#main-content-three{
+
+#main-content-two section{
+  justify-self: end;
+  color: rgb(200, 206, 212);
   background: var(--purple);
+
 }
 
+#main-content-three{
+  background: rgb(181, 212, 239);
+}
+
+#main-content-three section{
+  background: var(--silverblue);
+}
 
 /* services */
 
