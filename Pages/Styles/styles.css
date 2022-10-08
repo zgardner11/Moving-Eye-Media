@@ -8,8 +8,8 @@
   --reverse-bg-color: linear-gradient( to top, var(--navbar), aliceblue);
   --alternate-bg-color: linear-gradient( to bottom, var(--green), aliceblue);
   --navbar: hsl(208, 28%, 48%);
-  --skyblue:hsl(197, 76%, 74%);
-  --silverblue:rgba(68, 110, 147, 0.637);
+  --skyblue:rgb(181, 212, 239);
+  --silverblue:rgba(84, 135, 179, 0.411);
   --purple: rgb(17, 3, 37);
   --orange:rgb(179, 72, 0);
   --white:hsla(192, 10%, 90%, 0.979);
@@ -80,6 +80,7 @@ a:active{   /* emulates pressing of button in 3d space */
 
 p{
   line-height: 1.6;
+  max-width: 80ch;
 }
 /* navigation */
 
@@ -248,9 +249,10 @@ nav .book-button{
 }
 
 .main-content{
+  content-visibility: auto;
   display: flex;
   height: 75vh;
-  border: rgb(184, 177, 177) solid 1px;
+  /* border: rgb(184, 177, 177) solid 1px; */
 }
 
 .main-content h2{
@@ -261,29 +263,34 @@ nav .book-button{
 .main-content section{
   width: 33%;
   height: 90%;
-  margin: auto 0 auto 4rem;
+  min-height: fit-content;
+  margin: auto 0 auto 10%;
   padding: 2rem;
-  border: var(--orange) solid 1px;
-  border-radius: .2rem 1rem;
+  border: var(--purple) solid 1px;
+  border-radius: .2rem .7rem;
+  box-shadow: inset .4em -.4em var(--purple);
 }
 
 #main-content-one{
-  background: aliceblue;
+  background: linear-gradient(to bottom, aliceblue, var(--skyblue));
 }
 
 #main-content-one section{
-  background: var(--silverblue)
+  color: black;
+  background: var(--silverblue);
 }
 
 #main-content-two{
   background: rgba(201, 225, 255, 0.574);
+  justify-content: flex-end;
+  background: var(--skyblue);
 }
 
 #main-content-two section{
-  justify-self: end;
-  color: rgb(200, 206, 212);
-  background: var(--purple);
-
+  color: black;
+  background: var(--skyblue);
+  margin: auto 10% auto 0;
+  box-shadow: inset -.4em -.4em var(--purple);
 }
 
 #main-content-three{
@@ -291,14 +298,54 @@ nav .book-button{
 }
 
 #main-content-three section{
-  background: var(--silverblue);
+  color: rgba(246, 246, 246, 0.942);
+  background: var(--navbar);
+}
+
+#main-content-four{
+  background: linear-gradient(to top, aliceblue, var(--skyblue));
 }
 
 /* services */
 
 #services{
+
+  /* max-width: 74%; */
   background: var(--navbar);
-  height: 74vh;
+  height: 60vh;
+}
+
+.services-header{
+  padding-top: 10vh;
+  padding-bottom: 4vh;
+  display: block;
+  margin: auto;
+  width: 35%;
+  border-bottom: rgba(148, 148, 148, 0.493) solid 2px;
+  height: fit-content;
+}
+
+.services-header h4{
+  font-size: 1rem;
+}
+
+.services-card-wrapper{
+  margin: 8vh auto;
+  display: grid;
+  flex-wrap: nowrap;
+  flex-direction: column;
+  grid-template-columns: repeat(auto-fill, minmax(20vw, 1fr)); 
+  gap: 2rem;
+  max-width: 74%;
+}
+
+.services-card{
+  box-shadow: .5rem 2px .5rem rgba(53, 53, 53, 0.2);
+  background-color:rgba(207, 233, 255, 0.74);
+  color:var(--wine);
+  backdrop-filter: blur(20px);
+  border-radius: 4px;
+  padding: 2rem;
 }
 
 /* contact page */
@@ -401,4 +448,8 @@ button{
   display: flex;
   justify-content: center;
   border-radius: 2rem;
+}
+
+@media only screen and (max-width: 1300px) {
+
 }
