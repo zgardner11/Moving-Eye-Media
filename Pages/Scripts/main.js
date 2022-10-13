@@ -44,12 +44,6 @@ burger.addEventListener('click', () => {
 
 
 
+const message = "If you're reading this and like what you see wesbite wise, feel free to checkout my portfolio at github.com/zgardner11. Contact me for access to my other hub accounts too ;)"
 
-function isBigPenis(){
-    let bigPenis = false;
-    if(bigPenis != true){
-        return 'getwrektnerd';
-    }
-}
-
-console.log(isBigPenis());
+console.log(message);

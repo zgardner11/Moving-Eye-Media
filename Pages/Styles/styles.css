@@ -7,7 +7,7 @@
   --main-bg-color: linear-gradient( to bottom, var(--navbar), aliceblue);
   --reverse-bg-color: linear-gradient( to top, var(--navbar), aliceblue);
   --alternate-bg-color: linear-gradient( to bottom, var(--green), aliceblue);
-  --navbar: hsl(208, 28%, 48%);
+  --navbar: #587d9d;
   --skyblue:rgb(181, 212, 239);
   --silverblue:rgba(84, 135, 179, 0.411);
   --purple: rgb(17, 3, 37);
@@ -18,11 +18,11 @@
     rgba(255, 255, 255, 0.2),
     rgba(255, 255, 255, 0.4)
   );
-  --headerfont: 2.5vw;
-  --largefont: 2vw;
-  --mediumfont:1.5vw;
-  --smallfont: 1.25vw;
-  --textfont: 1.1vw;
+  --headerfont: 2.5rem;
+  --largefont: 2rem;
+  --mediumfont:1.5rem;
+  --smallfont: 1.25rem;
+  --textfont: 1rem;
 }
 
 * {
@@ -50,15 +50,10 @@ h2, h3{
 }
 
 h4{
-  font-family: 'EB Garamond', serif;
+  font-family: 'Outfit', sans-serif;
   font-size: var(--textfont);
   text-align: center;
-  font-weight: 200;
-}
-
-h5{
-  padding: 2rem;
-  text-align: center;
+  font-weight: 400;
 }
 
 img {
@@ -80,7 +75,7 @@ a:active{   /* emulates pressing of button in 3d space */
 
 p{
   line-height: 1.6;
-  max-width: 80ch;
+  max-width: 56ch;
 }
 /* navigation */
 
@@ -269,10 +264,10 @@ nav .book-button{
   height: 90%;
   min-height: fit-content;
   margin: auto 0 auto 10%;
-  padding: 2rem;
+  padding: 3rem;
   border: var(--purple) solid 1px;
   border-radius: .2rem .7rem;
-  box-shadow: inset .4em -.4em var(--purple);
+  box-shadow: inset .4em -.4em aliceblue;
 }
 
 #main-content-one{
@@ -310,17 +305,78 @@ nav .book-button{
   background: linear-gradient(to top, aliceblue, var(--skyblue));
 }
 
+/* about & faq page */
+
+#about-main{
+  background: var(--main-bg-color);
+  height: fit-content;
+}
+
+#faq{
+  color: aliceblue;
+}
+
+#faq article{
+ padding-top: 70vh;
+}
+
+.accordian{
+  display: flex;
+  justify-content: center;
+  flex-wrap: wrap;
+  background: rgba(30, 6, 83, 0.147);
+  width: 50%;
+  position: relative;
+  padding: 2rem;
+  margin: auto;
+  border: aliceblue solid 1px;
+  border-radius: .2rem 1.6rem;
+}
+
+.accordian-item{
+  padding: 1rem;
+  margin: 1rem auto;
+  border: rgb(179, 190, 199) solid 1px;
+  border-radius: 7px;
+  box-shadow: .5rem 2px .5rem rgba(0,0,0,0.1);
+  width: 70ch;
+  line-height: 1.6;
+}
+
+.accordian-link{
+  font-size: var(--smallheaderfont);
+}
+
+.accordian header{
+  width: 50%;
+  margin: 2rem auto;
+  border-bottom: aliceblue solid 1px;
+  padding-bottom: 2rem;
+  text-align: start;
+}
+
+#question1{
+  margin-top: 2rem;
+}
+
+ion-icon{
+  border: rgb(175, 175, 175) solid 1px;
+  padding: .2rem;
+  background-color: rgba(240, 248, 255, 0.891);
+  margin-left: .4rem;
+  border-radius: 50%;
+}
+
 /* services */
 
 #services{
-
   /* max-width: 74%; */
-  background: var(--navbar);
+  /* background: var(--navbar); */
   height: 60vh;
 }
 
 .services-header{
-  padding-top: 10vh;
+  padding-top: 7vh;
   padding-bottom: 4vh;
   display: block;
   margin: auto;
@@ -329,12 +385,32 @@ nav .book-button{
   height: fit-content;
 }
 
-.services-header h4{
-  font-size: 1rem;
+.services-card h3{
+  font-size: var(--smallfont);
+}
+
+.services-card h4{
+  margin: auto;
+  padding: 1rem 0;
+  width: 70%;
+}
+
+#card-border{
+  margin: 1rem auto;
+  width: 34%;
+  border-top: rgba(134, 134, 134, 0.658) solid 1px;
+}
+
+.services-card h5{
+  display: none;
+  font-size: 14px;
+  font-weight: 100;
+  padding: 2rem 0 1rem;
+  text-align: start;
 }
 
 .services-card-wrapper{
-  margin: 8vh auto;
+  margin: 7vh auto;
   display: grid;
   flex-wrap: nowrap;
   flex-direction: column;
@@ -344,12 +420,55 @@ nav .book-button{
 }
 
 .services-card{
-  box-shadow: .5rem 2px .5rem rgba(53, 53, 53, 0.2);
+  box-shadow: .5rem 2px .5rem rgba(105, 105, 105, 0.2);
   background-color:rgba(207, 233, 255, 0.74);
   color:var(--wine);
   backdrop-filter: blur(20px);
   border-radius: 4px;
   padding: 2rem;
+}
+
+.services-card ul{
+  min-height: fit-content;
+  height: 18 rem;
+  padding: 1rem;
+  margin-top: 20px;
+  box-shadow: 0px 7px 11px rgba(99, 99, 99, 0.2);
+  background-color:rgb(215, 236, 255);
+  backdrop-filter: blur(20px);
+  border: solid 1px rgba(240, 248, 255, 0.709);
+  list-style: circle;
+}
+
+.services-card li{
+  /* text-align: center; */
+  width: 80%;
+  margin: 1.5rem;
+  /* border: red solid 2px; */
+}
+
+#card-one ul{
+  border-radius: 22px 50px 4px 4px;
+}
+
+#card-two ul{
+  border-radius: 22px 22px 4px 4px;
+}
+
+#card-three ul{
+  border-radius: 50px 22px 4px 4px;
+}
+
+#spacer{
+  aspect-ratio: 2160/1440;
+  width: 100%;
+  background-repeat: no-repeat;
+  background-position: center;
+  background-size: cover;
+}
+
+.graphic{
+  background-image: url('/Pages/Images/wave.svg');
 }
 
 /* contact page */
@@ -454,6 +573,112 @@ button{
   border-radius: 2rem;
 }
 
-@media only screen and (max-width: 1300px) {
+@media screen and (max-width: 1300px) {
+
+  .navbar {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    position: sticky;
+    color:var(--white);
+    height: 8vh;
+  }
+
+  .burger {
+    position: absolute; /*keeps hamburger menu locked on right side of screen*/
+    right: 1rem;
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;
+    width: 1.7rem;
+    height: 1.4rem;
+    margin:auto;
+    cursor: pointer;
+  }
+
+  .burger .bar{
+    height: .1rem;
+    width: 100%;
+    background-color: var(--white);
+    border-radius: 1rem; /* rounds corners of hamburger menu */
+  }
+
+  #bar2{
+    width: 63%;
+    align-self: flex-end;
+  }
+
+  .logo-wrapper{
+    position: absolute;
+    display: flex;
+    align-items: center;
+    justify-content: start;
+    flex-wrap: wrap;
+    height: 100%;
+    width: 100%;
+  }
+
+  .logo{
+    font-size: var(--smallheaderfont);
+    margin-left: 0;
+    padding: 1rem 1.5rem;
+  }
+
+  .navlinks{
+    display: flex;
+    position: fixed;
+    width: auto;
+    top: 0px;
+    right: 0;
+    margin-left: auto;
+  }
+  
+  .navlinks-menu.active{
+    transform: translateX(0%);
+  }
+
+  .navlinks ul {
+    position: absolute;
+    right: 0;
+    height: 92vh;
+    top: 8vh;
+    width: 67vw;
+    max-width: 20rem;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: baseline;
+    background: var(--main-bg-color);
+    transform: translateX(100%);
+    transition: transform 750ms ease-in-out;
+    /* border: orange solid 4px; */
+  }
+ 
+  .navlinks ul li{  /*set breakpoint for ipad to fix nav sidebar.. if we still like it*/
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    max-width: 7rem;
+    max-height: 7rem;
+    margin: 4vh auto;
+    background-color: rgba(17, 0, 54, 0.209);
+    /* border: var(--rorange) solid 10px; */
+    border-radius: 50%;
+    box-shadow: 0 7px .7rem rgba(14, 0, 39, 0.525);
+  }
+
+  .navlinks ul li a {
+    color: rgb(255, 243, 236);
+    padding: 3rem;
+    font-weight: 300;
+    font-size: 12px;
+    border: none;
+  }
+
+  #contact-nav{
+    /* padding: 1rem; */
+    border-right:none;
+  }
+
 
 }
