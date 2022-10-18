@@ -1,0 +1,11 @@
+Common code use cases
+
+- Constraint validation API
+    - typically used to modify apperance of error message displayed for invalid form or login info
+    - set of methods & properties 
+        - HTMLButtonElement (represents a <button> element)
+        - HTMLFieldSetElement 
+        - HTMLInputElement 
+        - HTMLOutputElement 
+        - HTMLSelectElement 
+        - HTMLTextAreaElement 
