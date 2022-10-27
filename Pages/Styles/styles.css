@@ -12,7 +12,6 @@
   --silverblue:rgba(84, 135, 179, 0.411);
   --purple: rgb(17, 3, 37);
   --orange:rgb(179, 72, 0);
-  --white:hsla(192, 10%, 90%, 0.979);
   --lightgradient: linear-gradient(
     to bottom,
     rgba(255, 255, 255, 0.2),
@@ -29,6 +28,10 @@
   box-sizing: border-box; /*accounts for margin and padding in sizing, easier to size */
   margin: 0;
   padding: 0;
+}
+
+html{
+  scroll-behavior: smooth;
 }
 
 body {
@@ -77,6 +80,22 @@ p{
   line-height: 1.6;
   max-width: 56ch;
 }
+
+footer{
+  border-top:var(--silverblue) solid 2px;
+  background-color: var(--silverblue);
+  height: 20em;
+  padding: 3rem 10rem;
+}
+
+footer ul{
+  width: fit-content;
+}
+
+footer ul li{
+  margin: 1rem auto;
+}
+
 /* navigation */
 
 .navbar {
@@ -96,15 +115,16 @@ p{
   font-family: 'Outfit', sans-serif;
   position: relative;
   margin-left: 2rem;
-  color: var(--white);
+  color: whitesmoke;
   font-size: var(--smallfont);
   padding: 1.5rem;
   font-weight: 100;
-  transition: color 500ms ease-out;
+  transition: color 400ms ease-in-out, font-weight 250ms ease-in-out;
 }
 
 .logo:hover{
-  color: var(--wine);
+  color: black;
+  font-weight: 400;
 }
 
 .navlinks{
@@ -128,10 +148,9 @@ p{
 
 .navlinks li a {
   display: flex;
-  color: var(--white);
+  color: rgb(0, 0, 0);
   padding: 1rem;
-  /* margin-right: 2rem; */
-  font-weight: 200;
+  font-weight: 300;
   position: relative;
   justify-content: center;
   font-size: var(--textfont);
@@ -203,40 +222,43 @@ nav .book-button{
 /* main-content */
 
 #main-header-wrapper{
-    height: 100vh;
-    width: auto;
-    background: var(--main-bg-color);
+  height: 100vh;
+  width: auto;
+  background: var(--main-bg-color);
 }
 
-#video {
-    height: 70vh;
-    display: flex;
-    position: relative;
-    z-index: -1;
+#main-video {
+  height: 50vh;
+  display: flex;
+  position: relative;
+  z-index: -1;
 }
 
 #main-header{
-    height: 100vh;
-    font-size: var(--smallfont);
-    transition: opacity 1s;
+  height: 100vh;
+  font-size: var(--smallfont);
+  transition: opacity 1s;
 }
 
 #main-header h2{
-    font-family: 'Outfit', sans-serif;
-    font-size: var(--headerfont);
-    font-weight: 100;
-    margin: auto;
-    padding: 8vh 0 5vh;
-    width: fit-content;
-    position: relative;
+  font-family: 'Outfit', sans-serif;
+  font-size: var(--headerfont);
+  font-weight: 100;
+  margin: auto;
+  padding: 8vh 0 5vh;
+  width: fit-content;
+  position: relative;
 }
   
 #main-header h3{
-    position: relative;
-    text-align: center;
-    font-size: var(--smallfont);
-    font-weight: 400;
-    text-shadow: .2rem .4rem 22px rgb(124, 124, 124);
+  width: 50ch;
+  position: relative;
+  margin: 2rem auto;
+  /* right: 17%; */
+  text-align: center;
+  font-size: var(--smallfont);
+  font-weight: 400;
+  text-shadow: .2rem .4rem 22px rgb(124, 124, 124);
 }
 
 #main-header .book-button{
@@ -261,7 +283,7 @@ nav .book-button{
 
 .main-content section{
   width: 33%;
-  height: 90%;
+  height: 100%;
   min-height: fit-content;
   margin: auto 0 auto 10%;
   padding: 3rem;
@@ -370,8 +392,6 @@ ion-icon{
 /* services */
 
 #services{
-  /* max-width: 74%; */
-  /* background: var(--navbar); */
   height: 60vh;
 }
 
@@ -441,10 +461,8 @@ ion-icon{
 }
 
 .services-card li{
-  /* text-align: center; */
   width: 80%;
   margin: 1.5rem;
-  /* border: red solid 2px; */
 }
 
 #card-one ul{
@@ -573,6 +591,13 @@ button{
   border-radius: 2rem;
 }
 
+/* footer */
+
+#terms{
+  background-color: var(--navbar);
+  color: black;
+}
+
 @media screen and (max-width: 1300px) {
 
   .navbar {
@@ -580,7 +605,7 @@ button{
     justify-content: space-between;
     align-items: center;
     position: sticky;
-    color:var(--white);
+    color:whitesmoke;
     height: 8vh;
   }
 
@@ -599,7 +624,7 @@ button{
   .burger .bar{
     height: .1rem;
     width: 100%;
-    background-color: var(--white);
+    background-color: whitesmoke;
     border-radius: 1rem; /* rounds corners of hamburger menu */
   }
 
