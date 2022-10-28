@@ -3,11 +3,14 @@
 <head>
     <meta charset="UTF-8">
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta name="description" content="Moving Eye Media offers a unique, immersive virtual tour experience utilizing custom-built FPV drones. Come check us out and see how this new technology is revolutionizing the digital marketing industry.">
     <title>Moving Eye Media</title>
+
+    <!-- bootstrap -->
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.2.2/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-Zenh87qX5JnK2Jl0vWa8Ck2rdkQ2Bzep5IDxbcnCeuOxjzrPF/et3URy9Bv1WTRi" crossorigin="anonymous">
     <link rel = stylesheet href = "Styles/styles.css"></style>
+    <script defer src="https://cdn.jsdelivr.net/npm/bootstrap@5.2.2/dist/js/bootstrap.bundle.min.js" integrity="sha384-OERcA2EqjJCMA+/3y+gxIOqMEjwtxJY7qPCqsdltbNJuaOe923+mo//f6V8Qbsw3" crossorigin="anonymous"></script>
     <script src = "Scripts/main.js" defer></script>
-    <script src="https://unpkg.com/ionicons@5.0.0/dist/ionicons.js"></script>
 </head>
 <body>
     <nav class="navbar">
@@ -28,96 +31,73 @@
             </ul>
         </section>
     </nav>
-    <main id = "about-main">
-        <section>
-            <article>
-                <header>
-                    <h2>
-                        Who we are:
-                    </h2>
-                </header>
-            </article>
-        </section>
-        <section id="faq">
-            <article>
-            <div class="accordian">
-                <header>
-                    <h2> FAQ </h2>
-                </header>
-                <div class="accordian-item" id = "question1">
-                    <a href="#question1" class = "accordian-link">
-                        How many years of experience do you have?
-                        <ion-icon name="add"></ion-icon>
-                        <ion-icon name="remove"></ion-icon>
-                    </a>
-                    <div class="faq-answer">
-                       I have over 6 years of experience producing commercial media, including weddings, real estate, and local business campaigns. I have also spent the last 3 years of those years building my own custom drones and flying as an FAA part 107 pilot. 
-                    </div>
-                </div>
-                <div class="accordian-item" id = "question2">
-                    <a href="#question2"  class = "accordian-link">
-                        Which areas do you cover?
-                        <ion-icon name="add"></ion-icon>
-                        <ion-icon name="remove"></ion-icon>
-                    </a>
-                    <div class="faq-answer">
-                        The main cities I cover are San Clemente, Laguna Beach, Newport Beach, Dana Point and San Diego but I am willing to travel anywhere in Orange County, California.
-                    </div>
-                </div>
-                <div class="accordian-item" id = "question3">
-                    <a href="#question3"  class = "accordian-link">
-                        What are your rates?
-                        <ion-icon name="add"></ion-icon>
-                        <ion-icon name="remove"></ion-icon>
-                    </a>
-                    <div class="faq-answer">
-                        My rates vary based on the desired services and size of the property, as well as the industry. Pricing information can be found by clicking the "Let's Fly" button in the navigation menu. Any service seen on my website can be performed a la carte as well, so feel free to contact me if you're interested in something specific and I can give you a quote. Custom orders are welcome!
-                    </div>
-                </div>
-                <div class="accordian-item" id = "question4">
-                    <a href="#question4" class = "accordian-link">
-                        What kind of drone do you have?
-                        <ion-icon name="add"></ion-icon>
-                        <ion-icon name="remove"></ion-icon>
-                    </a>
-                    <div class="faq-answer" class = "accordian-link">
-                        A combination of hand-built and pre-built drones are used, depending on the application. Standard consumer drones are ideal for exterior angles, but are incapable of producing interior shots due to their size, GPS requirement and other software restrictions. So we overcame this limitation by building our own. Each model used indoors is under 250g and fits in the palm of your hand. This small size combined with the skill of our FAA certified pilots heavily mitigates any possible damage, and we have $2 million in liability insurance on top of all that. 
-                    </div>
-                </div>
-                <div class="accordian-item" id = "question5">
-                    <a href="#question5" class = "accordian-link">
-                        How much is your deposit fee?
-                        <ion-icon name="add"></ion-icon>
-                        <ion-icon name="remove"></ion-icon>
-                    </a>
-                    <div class="faq-answer">
-                        Lorem ipsum dolor sit amet consectetur, adipisicing elit. Alias, porro quo!
-                    </div>
-                </div>
-                <div class="accordian-item" id = "question6">
-                    <a href="#question6" class = "accordian-link">
-                        How many years of experience do you have?
-                        <ion-icon name="add"></ion-icon>
-                        <ion-icon name="remove"></ion-icon>
-                    </a>
-                    <div class="faq-answer">
-                        Lorem ipsum dolor sit amet consectetur, adipisicing elit. Alias, porro quo!
-                    </div>
-                </div>
-                <div class="accordian-item" id = "question7">
-                    <a href="#question7" class = "accordian-link">
-                        Do you always include aerial footage?
-                        <ion-icon name="add"></ion-icon>
-                        <ion-icon name="remove"></ion-icon>
-                    </a>
-                    <div class="faq-answer">
-                        Lorem ipsum dolor sit amet consectetur, adipisicing elit. Alias, porro quo!
-                    </div>
-                </div>
+    <main>
+        <div class="accordion accordion-flush" id="accordionFlushExample">
+            <div class="accordion-item">
+              <h2 class="accordion-header" id="flush-headingOne">
+                <button class="accordion-button collapsed" type="button" data-bs-toggle="collapse" data-bs-target="#flush-collapseOne" aria-expanded="false" aria-controls="flush-collapseOne">
+                  Accordion Item #1
+                </button>
+              </h2>
+              <div id="flush-collapseOne" class="accordion-collapse collapse" aria-labelledby="flush-headingOne" data-bs-parent="#accordionFlushExample">
+                <div class="accordion-body">Placeholder content for this accordion, which is intended to demonstrate the <code>.accordion-flush</code> class. This is the first item's accordion body.</div>
+              </div>
             </div>
-            </article>
-        </section>
+            <div class="accordion-item">
+              <h2 class="accordion-header" id="flush-headingTwo">
+                <button class="accordion-button collapsed" type="button" data-bs-toggle="collapse" data-bs-target="#flush-collapseTwo" aria-expanded="false" aria-controls="flush-collapseTwo">
+                  Accordion Item #2
+                </button>
+              </h2>
+              <div id="flush-collapseTwo" class="accordion-collapse collapse" aria-labelledby="flush-headingTwo" data-bs-parent="#accordionFlushExample">
+                <div class="accordion-body">Placeholder content for this accordion, which is intended to demonstrate the <code>.accordion-flush</code> class. This is the second item's accordion body. Let's imagine this being filled with some actual content.</div>
+              </div>
+            </div>
+            <div class="accordion-item">
+              <h2 class="accordion-header" id="flush-headingThree">
+                <button class="accordion-button collapsed" type="button" data-bs-toggle="collapse" data-bs-target="#flush-collapseThree" aria-expanded="false" aria-controls="flush-collapseThree">
+                  Accordion Item #3
+                </button>
+              </h2>
+              <div id="flush-collapseThree" class="accordion-collapse collapse" aria-labelledby="flush-headingThree" data-bs-parent="#accordionFlushExample">
+                <div class="accordion-body">Placeholder content for this accordion, which is intended to demonstrate the <code>.accordion-flush</code> class. This is the third item's accordion body. Nothing more exciting happening here in terms of content, but just filling up the space to make it look, at least at first glance, a bit more representative of how this would look in a real-world application.</div>
+              </div>
+            </div>
+          </div>
+          <footer>
+            <div class="container">
+                <footer class="py-3 my-4">
+                  <ul class="nav justify-content-center border-bottom pb-3 mb-3">
+                    <li class="nav-item"><a href="#" class="nav-link px-2 text-muted">Home</a></li>
+                    <li class="nav-item"><a href="#" class="nav-link px-2 text-muted">About</a></li>
+                    <li class="nav-item"><a href="#" class="nav-link px-2 text-muted">Contact</a></li>
+                    <li class="nav-item"><a href="#" class="nav-link px-2 text-muted">Portfolio</a></li>
+                    <li class="nav-item"><a href="#" class="nav-link px-2 text-muted">Book</a></li>
+                  </ul>
+                  <p class="text-center text-muted">&copy; 2022 Moving Eye Media, LLC</p>
+                </footer>
+              </div>
+            <svg xmlns="http://www.w3.org/2000/svg" style="display: none;">
+                <symbol id="bootstrap" viewBox="0 0 118 94">
+                  <title>Bootstrap</title>
+                  <path fill-rule="evenodd" clip-rule="evenodd" d="M24.509 0c-6.733 0-11.715 5.893-11.492 12.284.214 6.14-.064 14.092-2.066 20.577C8.943 39.365 5.547 43.485 0 44.014v5.972c5.547.529 8.943 4.649 10.951 11.153 2.002 6.485 2.28 14.437 2.066 20.577C12.794 88.106 17.776 94 24.51 94H93.5c6.733 0 11.714-5.893 11.491-12.284-.214-6.14.064-14.092 2.066-20.577 2.009-6.504 5.396-10.624 10.943-11.153v-5.972c-5.547-.529-8.934-4.649-10.943-11.153-2.002-6.484-2.28-14.437-2.066-20.577C105.214 5.894 100.233 0 93.5 0H24.508zM80 57.863C80 66.663 73.436 72 62.543 72H44a2 2 0 01-2-2V24a2 2 0 012-2h18.437c9.083 0 15.044 4.92 15.044 12.474 0 5.302-4.01 10.049-9.119 10.88v.277C75.317 46.394 80 51.21 80 57.863zM60.521 28.34H49.948v14.934h8.905c6.884 0 10.68-2.772 10.68-7.727 0-4.643-3.264-7.207-9.012-7.207zM49.948 49.2v16.458H60.91c7.167 0 10.964-2.876 10.964-8.281 0-5.406-3.903-8.178-11.425-8.178H49.948z"></path>
+                </symbol>
+                <symbol id="instagram" viewBox="0 0 16 16">
+                    <path d="M8 0C5.829 0 5.556.01 4.703.048 3.85.088 3.269.222 2.76.42a3.917 3.917 0 0 0-1.417.923A3.927 3.927 0 0 0 .42 2.76C.222 3.268.087 3.85.048 4.7.01 5.555 0 5.827 0 8.001c0 2.172.01 2.444.048 3.297.04.852.174 1.433.372 1.942.205.526.478.972.923 1.417.444.445.89.719 1.416.923.51.198 1.09.333 1.942.372C5.555 15.99 5.827 16 8 16s2.444-.01 3.298-.048c.851-.04 1.434-.174 1.943-.372a3.916 3.916 0 0 0 1.416-.923c.445-.445.718-.891.923-1.417.197-.509.332-1.09.372-1.942C15.99 10.445 16 10.173 16 8s-.01-2.445-.048-3.299c-.04-.851-.175-1.433-.372-1.941a3.926 3.926 0 0 0-.923-1.417A3.911 3.911 0 0 0 13.24.42c-.51-.198-1.092-.333-1.943-.372C10.443.01 10.172 0 7.998 0h.003zm-.717 1.442h.718c2.136 0 2.389.007 3.232.046.78.035 1.204.166 1.486.275.373.145.64.319.92.599.28.28.453.546.598.92.11.281.24.705.275 1.485.039.843.047 1.096.047 3.231s-.008 2.389-.047 3.232c-.035.78-.166 1.203-.275 1.485a2.47 2.47 0 0 1-.599.919c-.28.28-.546.453-.92.598-.28.11-.704.24-1.485.276-.843.038-1.096.047-3.232.047s-2.39-.009-3.233-.047c-.78-.036-1.203-.166-1.485-.276a2.478 2.478 0 0 1-.92-.598 2.48 2.48 0 0 1-.6-.92c-.109-.281-.24-.705-.275-1.485-.038-.843-.046-1.096-.046-3.233 0-2.136.008-2.388.046-3.231.036-.78.166-1.204.276-1.486.145-.373.319-.64.599-.92.28-.28.546-.453.92-.598.282-.11.705-.24 1.485-.276.738-.034 1.024-.044 2.515-.045v.002zm4.988 1.328a.96.96 0 1 0 0 1.92.96.96 0 0 0 0-1.92zm-4.27 1.122a4.109 4.109 0 1 0 0 8.217 4.109 4.109 0 0 0 0-8.217zm0 1.441a2.667 2.667 0 1 1 0 5.334 2.667 2.667 0 0 1 0-5.334z"/>
+                </symbol>
+                <symbol id="twitter" viewBox="0 0 16 16">
+                  <path d="M5.026 15c6.038 0 9.341-5.003 9.341-9.334 0-.14 0-.282-.006-.422A6.685 6.685 0 0 0 16 3.542a6.658 6.658 0 0 1-1.889.518 3.301 3.301 0 0 0 1.447-1.817 6.533 6.533 0 0 1-2.087.793A3.286 3.286 0 0 0 7.875 6.03a9.325 9.325 0 0 1-6.767-3.429 3.289 3.289 0 0 0 1.018 4.382A3.323 3.323 0 0 1 .64 6.575v.045a3.288 3.288 0 0 0 2.632 3.218 3.203 3.203 0 0 1-.865.115 3.23 3.23 0 0 1-.614-.057 3.283 3.283 0 0 0 3.067 2.277A6.588 6.588 0 0 1 .78 13.58a6.32 6.32 0 0 1-.78-.045A9.344 9.344 0 0 0 5.026 15z"/>
+                </symbol>
+              </svg>
+            <ul class="social-icons">
+           
+                <li class="ms-3"><a class="text-muted" href="#"><svg class="bi" width="24" height="24"><use xlink:href="#instagram"/></svg></a></li>
+                <li class="ms-3"><a class="text-muted" href="#"><svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" fill="currentColor" class="bi bi-youtube" viewBox="0 0 16 16">
+                    <path d="M8.051 1.999h.089c.822.003 4.987.033 6.11.335a2.01 2.01 0 0 1 1.415 1.42c.101.38.172.883.22 1.402l.01.104.022.26.008.104c.065.914.073 1.77.074 1.957v.075c-.001.194-.01 1.108-.082 2.06l-.008.105-.009.104c-.05.572-.124 1.14-.235 1.558a2.007 2.007 0 0 1-1.415 1.42c-1.16.312-5.569.334-6.18.335h-.142c-.309 0-1.587-.006-2.927-.052l-.17-.006-.087-.004-.171-.007-.171-.007c-1.11-.049-2.167-.128-2.654-.26a2.007 2.007 0 0 1-1.415-1.419c-.111-.417-.185-.986-.235-1.558L.09 9.82l-.008-.104A31.4 31.4 0 0 1 0 7.68v-.123c.002-.215.01-.958.064-1.778l.007-.103.003-.052.008-.104.022-.26.01-.104c.048-.519.119-1.023.22-1.402a2.007 2.007 0 0 1 1.415-1.42c.487-.13 1.544-.21 2.654-.26l.17-.007.172-.006.086-.003.171-.007A99.788 99.788 0 0 1 7.858 2h.193zM6.4 5.209v4.818l4.157-2.408L6.4 5.209z"/>
+                  </svg><use xlink:href="#facebook"/></svg></a></li>
+                  <li class="ms-3"><a class="text-muted" href="#"><svg class="bi" width="24" height="24"><use xlink:href="#twitter"/></svg></a></li>
+              </ul>
+        </footer>
     </main>
 </body>
-
 </html>

@@ -3,9 +3,13 @@
 <head>
     <meta charset="UTF-8">
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta name="description" content="Moving Eye Media offers a unique, immersive virtual tour experience utilizing custom-built FPV drones. Come check us out and see how this new technology is revolutionizing the digital marketing industry.">
     <title>Moving Eye Media</title>
     <link rel = stylesheet href = "Styles/styles.css"></style>
+    <!-- bootstrap -->
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.2.2/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-Zenh87qX5JnK2Jl0vWa8Ck2rdkQ2Bzep5IDxbcnCeuOxjzrPF/et3URy9Bv1WTRi" crossorigin="anonymous">
+    <link rel = stylesheet href = "Styles/styles.css"></style>
+    <script defer src="https://cdn.jsdelivr.net/npm/bootstrap@5.2.2/dist/js/bootstrap.bundle.min.js" integrity="sha384-OERcA2EqjJCMA+/3y+gxIOqMEjwtxJY7qPCqsdltbNJuaOe923+mo//f6V8Qbsw3" crossorigin="anonymous"></script>
     <script src = "Scripts/main.js" defer></script>
 </head>
 <body>
@@ -36,10 +40,10 @@
             <form action = "contactform.php" method= "POST" id = "contact-form">
                 <p>
                     <label for = "name">Name*</label>
-                    <input type = "text" class = "contact-name" name = "name">
+                    <input type = "text" class = "contact-name" name = "name" required>
                 </p>
                 <p>
-                    <label for = "email">Email*</label>
+                    <label for = "email">Email*</label required>
                     <input type = "email" class = "contact-input" name = "email">
                 </p>
                 <p>
